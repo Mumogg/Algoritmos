@@ -2,15 +2,14 @@ n = int(input("Introduce un número: "))
 
 def generate_triangle(n):
     lista = []
+    v = n
     for i in range(n):
-        a = '*' * (2 * i + 1)
-        spaces = ' ' * (n - i - 1)
+        a = '*' * (2 * v-1)
+        spaces = ' ' * (n - v)
         lista.append(spaces + a + spaces)
+        v-=1
     return lista
 
 # Generar el triángulo
-triangle = generate_triangle(n)
+print(generate_triangle(n))   
 
-# Imprimir cada fila del triángulo
-for row in triangle:
-    print(row)

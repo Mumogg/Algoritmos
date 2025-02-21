@@ -3,9 +3,9 @@ n = int(input("Introduce un número: "))
 def generate_triangle(n):
     lista = []
     for i in range(n):
-        a = '*' * (2 * i + 1)
+        a = 0+1 * (2 * i + 1)
         spaces = ' ' * (n - i - 1)
-        lista.append(spaces + a + spaces)
+        lista.append(a + spaces + a)
     return lista
 
 # Generar el triángulo
