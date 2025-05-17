@@ -1,13 +1,13 @@
-def numberN(n, accumulator = 0):
+def numberN(n, lis = None):
+    if lis is None:
+        lis = []
     if n==0:
-        return accumulator 
+        return lis
     
-    accumulator = accumulator + 1
-    print(n)
+    lis.append(n)
+    return numberN(n-1, lis)  
 
-    return numberN(n-1, accumulator)
-
-numberN(6)
+print(numberN(8))
 
 
 
