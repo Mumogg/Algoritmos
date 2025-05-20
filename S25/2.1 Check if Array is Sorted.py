@@ -1,3 +1,4 @@
+#Head
 def checkSorted(l1):
     if(len(l1)==0 or len(l1)==1):
         return True
@@ -9,7 +10,7 @@ def checkSorted(l1):
     else:
         return False
     
-
+#Tail
 def checkSorted2(l1):
     if(len(l1)==0 or len(l1)==1):
         return True
