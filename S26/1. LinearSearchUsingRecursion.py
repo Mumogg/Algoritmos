@@ -19,14 +19,14 @@ def LinearSearchUsingRecursionBetter(l1,x,index):
 
     
 
-def LinearSearchUsingRecursion(l1,x,index):
+#def LinearSearchUsingRecursion(l1,x,index):
     # Base Case
-    if(len(l1) == index):
-        return False
+    #if(len(l1) == index):
+        #return False
     
     
 
-    ansFromRecursion = LinearSearchUsingRecursion(l1,x,index+1)
+    #ansFromRecursion = LinearSearchUsingRecursion(l1,x,index+1)
 
     # if(ansFromRecursion == True):
     #     return True
@@ -35,7 +35,7 @@ def LinearSearchUsingRecursion(l1,x,index):
     #     return True
     # return False
 
-    return l1[index] == x or ansFromRecursion
+    #return l1[index] == x or ansFromRecursion
 
 
 l1 = [i for i in range(100000)]
