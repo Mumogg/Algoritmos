@@ -24,6 +24,15 @@ def merge(l1,s,m,e):
     while(j<=e):
         ans.append(l1[j])
         j+=1
+    
+    startOfMyAns = 0
+    startOfMyList = s
+
+    while(startOfMyList<=e):
+        l1[startOfMyList] = ans[startOfMyAns]
+        startOfMyAns+=1
+        startOfMyList+=1
+    return
 
 def mergeSortHelper(l1,s,e):
     if s>=e:
@@ -31,10 +40,10 @@ def mergeSortHelper(l1,s,e):
     
     m = s + (e-s)//2
 
-    mergeSort(l1,s,m)
-    mergeSort(l1,m+1,e)
+    mergeSortHelper(l1,s,m)
+    mergeSortHelper(l1,m+1,e)
 
-    merge(l1)
+    merge(l1,s,m,e)
     
     return
 
@@ -45,3 +54,4 @@ def mergeSort(l1):
 
 l1 = [8,15,3,1,4,9,11,2]
 mergeSort(l1)
+print(l1)
